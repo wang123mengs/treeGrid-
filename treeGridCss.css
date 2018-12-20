@@ -1,0 +1,107 @@
+/**** treeGrid 样式 --start ****/
+.treeGrid_header li,.treeGrid_main li {
+  list-style: none;
+  height:25px;
+}
+.treeGrid_header li span,.treeGrid_header b,.treeGrid_main li b {
+  display: inline-block;
+  height:25px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+.treeGrid_header b,.treeGrid_main b {
+  width:25px;
+}
+.treeGrid_main b.ope {
+  background: url(./images/treeClose.png) no-repeat ;
+  background-position: center;
+  background-size: cover;
+  cursor:pointer;
+}
+.treeGrid_main b.cls {
+  background: url(./images/treeOpen.png) no-repeat ;
+  background-position: center;
+  background-size: cover;
+  cursor:pointer;
+}
+.treeGrid_main ul.close {
+  height: 0;
+}
+.treeGrid_main ul > ul {
+  overflow: hidden;
+  transition: height 0.3s;
+}
+.treeGrid_header {
+  position:absolute;
+  top:0;
+  left:0;
+  height:26px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+.treeGrid_header span,.treeGrid_main span {
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  padding-left: 3px;
+  border-right:1px solid #fff;
+  box-sizing: border-box;
+}
+.treeGrid_main b.num_list,.treeGrid_header b.num_list {
+  line-height: 25px;
+  text-align: center;
+  color:#000;
+  font-weight: 400;
+  background: transparent linear-gradient(to bottom,#f9f9f9 0px,#efefef 100%) repeat-x scroll 0 0;
+  border-color: #fff;
+  border-width:0 1px 0 0;
+  border-style: solid;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.treeGrid_main {
+  position:absolute;
+  left:0;
+  top:26px;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 28px);
+  height: -moz-calc(100% - 28px);
+  overflow:scroll;
+  -webkit-scrolling:trouch;
+}
+.treeGrid_main li:hover {
+  background-color: #e5ccf5;
+}
+.treeGrid_main li img {
+  height:22px;
+  vertical-align: middle;
+}
+.treeGrid_main b.icon {
+  height:20px;
+  width:20px;
+  margin:2px;
+  background: url(./images/icon_20.png) no-repeat;
+}
+.treeGrid_main b.icon_0 {
+  background-position: 0px -39px;
+}
+.treeGrid_main b.icon_1 {
+  background-position: -20px -39px;
+}
+.treeGrid_main b.icon_2 {
+  background-position: -39px -39px;
+}
+.treeGrid_main b.icon_3 {
+  background-position: -59px -39px;
+}
+.treeGrid_main b.icon_4 {
+  background-position: -78px -39px;
+}
+.treeGrid_main b.icon_5 {
+  background-position: -98px -39px;
+}
+/**** treeGrid 样式 --end ****/
