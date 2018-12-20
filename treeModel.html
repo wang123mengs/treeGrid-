@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    html,div,body,ul,li {
+      padding: 0;
+      margin: 0;
+    }
+    html,body {
+      height:100%;
+      width:100%;
+    }
+    #box{
+      height:500px;
+      width:800px;
+      border: 1px solid #ccc;
+      margin:20px auto;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="./treeGridCss.css">
+</head>
+<body>
+  <div id="box">
+    
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="./treeGrid.js"></script>
+  <script>
+    var arrData = [{
+      name:'公司',
+      url:'./images/1.jpg',
+      age:'88',
+      zuzhi:'天宇',
+      title:'小星星',
+      open:true,
+      lev:0,
+      children:[
+        {
+          name:'财务部',
+          age:'88',
+          lev:1,
+          url:'./images/2.jpg',
+          zuzhi:'天宇',
+          title:'小星星',
+          open:true,
+          children:[
+            {
+              name:'小明',
+              age:'88',
+              lev:2,
+              url:'./images/4.jpg',
+              zuzhi:'天宇2',
+              title:'小星星2',
+              open:true,
+              children:[]
+            },
+            {
+              name:'小红',
+              age:'88',
+              url:'./images/5.jpg',
+              open:true,
+              lev:2,
+              children:[]
+            }
+          ]
+        },
+        {
+          name:'人事部',
+          age:'88',
+          lev:1,
+          zuzhi:'天宇3',
+          url:'./images/6.jpg',
+          title:'小星星3',
+          open:false,
+          children:[
+            {
+              name:'小站',
+              age:'88',
+              lev:2,
+              open:false,
+              children:[]
+            },
+            {
+              name:'小离',
+              age:'88',
+              lev:2,
+              zuzhi:'天宇4',
+              title:'小星星4',
+              open:true,
+              children:[]
+            },
+            {
+              name:'一组',
+              age:'88',
+              lev:2,
+              open:true,
+              children:[
+                {
+                  name:'聚聚',
+                  age:'88',
+                  open:false,
+                  zuzhi:'天宇5',
+                  title:'小星星5',
+                  lev:3,
+                  children:[]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name:'研发部',
+          age:'88',
+          lev:1,
+          open:true,
+          children:[]
+        }
+      ]
+    }];
+    //第一种生成treeGrid--方法调用
+    $("#box").perfectEleTree({
+      data:arrData,
+      culmn:[
+        {field:'name',title:'名字',width:'0.4'},
+        {field:'age',title:'年龄',width:'0.2'},
+        {field:'zuzhi',title:'组织',width:'0.2'},
+        {field:'title',title:'标题',width:'0.18'}
+      ]
+    });
+    //第二种生成treeGrid--方法调用
+    // $.perfectEleTree({
+    //   id:"box",
+    //   data:arrData,
+    //   culmn:[
+    //     {field:'name',title:'名字',width:'0.4'},
+    //     {field:'age',title:'年龄',width:'0.2'},
+    //     {field:'zuzhi',title:'组织',width:'0.2'},
+    //     {field:'title',title:'标题',width:'0.18'}
+    //   ]
+    // });
+  </script>
+</body>
+</html>
